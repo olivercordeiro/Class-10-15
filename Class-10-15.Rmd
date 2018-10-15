@@ -1,0 +1,26 @@
+---
+title: "Class-10-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(knitr)
+library(gov.1005.data)
+```
+
+
+```{r}
+library(readxl)
+Fall2018 <- read_excel("Fall2018.xlsx")
+View(Fall2018)
+Fall2017 <- read_excel("Fall2017.xlsx")
+View(Fall2017)
+Fall2016 <- read_excel("Fall2016.xlsx")
+View(Fall2016)
+Fall2015 <- read_excel("Fall2015.xlsx")
+View(Fall2015)
+```
+
