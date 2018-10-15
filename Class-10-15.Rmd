@@ -9,18 +9,39 @@ library(tidyverse)
 library(dplyr)
 library(knitr)
 library(gov.1005.data)
+library(janitor)
 ```
 
 
 ```{r}
 library(readxl)
-Fall2018 <- read_excel("Fall2018.xlsx")
-View(Fall2018)
-Fall2017 <- read_excel("Fall2017.xlsx")
-View(Fall2017)
-Fall2016 <- read_excel("Fall2016.xlsx")
-View(Fall2016)
-Fall2015 <- read_excel("Fall2015.xlsx")
-View(Fall2015)
+fall2018 <- read_excel("Fall2018.xlsx", skip = 2) 
+View(fall2018)
+
+fall2017 <- read_excel("Fall2017.xlsx", skip = 2)
+View(fall2017)
+
+fall2016 <- read_excel("Fall2016.xlsx", skip = 2)
+View(fall2016)
+
+fall2015 <- read_excel("Fall2015.xlsx", skip = 2)
+View(fall2015)
+
+
 ```
+
+```{r}
+fall2018 %>% 
+  clean_names()
+
+fall2017 %>% 
+  clean_names()
+
+fall2016 %>% 
+  clean_names()
+
+fall2015 %>% 
+  clean_names()
+```
+
 
